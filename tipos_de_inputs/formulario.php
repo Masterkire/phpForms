@@ -28,12 +28,26 @@
         <input type="number" name="persona[edad]"> -->
 
         <!-- Checkbox -->
-        <label>Primer valor:</label>
+        <!-- <label>Primer valor:</label>
         <input type="checkbox" name="list1" value="valor 1">
         <label>Segundo valor:</label>
         <input type="checkbox" name="list2" value="valor 2">
         <label>Tercer valor:</label>
-        <input type="checkbox" name="list3" value="valor 3">
+        <input type="checkbox" name="list3" value="valor 3"> -->
+
+        <!-- Radios -->
+
+        <!-- <label for="mexico">Mexico</label>
+        <input type="radio" name="pais" id="mexico" value="Mexico">
+        <label for="colombia">Colombia</label>
+        <input type="radio" name="pais" id="colombia" value="Colombia">
+        <label for="peru">Peru</label>
+        <input type="radio" name="pais" id="peru" value="Peru"> -->
+
+        <!-- Multiples archivos -->
+
+        <label for="galeria">Carga tus imagenes</label>
+        <input type="file" multiple name="galeria[]" id="galeria" >
 
         <button type="submit">Mandar formulario</button>
     </form>
