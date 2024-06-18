@@ -1,3 +1,24 @@
+@keyframe float {
+    0% {
+      transform: translateY(0%);
+    }
+    30% {
+        transform: translateY(-20%);
+    }
+    50% {
+        transform: translateY(-40%);
+    }
+    68% {
+        transform: translateY(-20%);
+    }
+    72% {
+        transform: translateY(-20%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +33,20 @@ input, a, li, textarea {
 
 body {
     background-color: rgb(244, 243, 237);
+    position: relative;
+    z-index: -10;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url("img/undraw_video_games.svg");
+    background-position: 95% center;
+    background-size: 30%;
+    background-repeat: no-repeat;
+    animation:3s infinite ease-in float;
+    z-index: 0;
 }
 
 form {
@@ -20,8 +55,14 @@ form {
     margin-top: 5rem;
     margin-bottom: 5rem;
     padding: 1.5rem;
-    border:1.5px solid aqua;
-    border-radius: 1rem;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,6 +72,23 @@ form {
 h1 {
     padding: 8px;
     margin-bottom: .8rem;
+}
+
+.input-group {
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-group input, textarea {
+    width: 14rem;
+    height: 1.6rem;
+    border-radius: 5px;
+    border: 1.5px solid aqua;
+}
+
+.input-group textarea {
+    height: 3rem;
 }
 
 .input-group, .button-container {
